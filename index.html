@@ -1,0 +1,246 @@
+<!--
+Thiago Memelli - Personal Landing Page
+File: index.html
+
+INSTRUÇÕES RÁPIDAS DE DEPLOY (GitHub Pages):
+1) Coloque este arquivo no repositório `tmemelli.github.io` como `index.html` na raiz.
+2) Commit e push. Em alguns minutos seu site estará disponível em:
+   https://tmemelli.github.io
+3) Para usar o domínio customizado (thiagomemelli.com.br):
+   - No registro.br, adicione os registros A abaixo:
+       185.199.108.153
+       185.199.109.153
+       185.199.110.153
+       185.199.111.153
+   - Adicione também um registro CNAME para `www` apontando para `tmemelli.github.io`.
+   - No GitHub -> repository -> Settings -> Pages -> Custom domain, coloque: thiagomemelli.com.br
+   - Aguarde propagação DNS (10 min a 24h).
+
+Customize o conteúdo (nome, texto, links) diretamente abaixo no HTML.
+-->
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thiago Memelli — Data Science & Python</title>
+  <meta name="description" content="Thiago Memelli — Data Science, Python, Automação. Cartão de visita digital." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1020;
+      --card:#0f1724;
+      --accent1:#7c3aed; /* purple */
+      --accent2:#06b6d4; /* teal */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071021 0%, #071428 40%, #0b1224 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    .container{max-width:980px;margin:40px auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{
+      width:64px;height:64px;border-radius:12px;display:grid;place-items:center;
+      background: linear-gradient(135deg,var(--accent1),var(--accent2));
+      font-weight:700;color:white;font-size:18px
+    }
+    h1{margin:0;font-size:28px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+
+    .about{padding:12px 0}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    a.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021028}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* projects */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01), rgba(255,255,255,0.02));}
+    .proj h4{margin:0 0 6px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+    }
+
+    /* small animated accent */
+    .accent-bar{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--accent1),var(--accent2));margin-top:18px}
+
+    /* subtle link style */
+    a.link{color:var(--accent2);text-decoration:none;font-weight:600}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TM</div>
+        <div>
+          <h1>Thiago Memelli</h1>
+          <p class="lead">Python • Data Science • Automação</p>
+        </div>
+      </div>
+      <nav>
+        <a class="link" href="#about">Sobre</a> &nbsp;•&nbsp;
+        <a class="link" href="#projects">Projetos</a> &nbsp;•&nbsp;
+        <a class="link" href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Olá — eu sou o Thiago</h2>
+        <p class="about">Sou profissional de Data Science com foco em soluções práticas: automação de processos, análise de dados e desenvolvimento em Python. Gosto de transformar problemas confusos em soluções simples e confiáveis.</p>
+
+        <div class="skills">
+          <div class="skill">Python</div>
+          <div class="skill">Pandas / NumPy</div>
+          <div class="skill">Machine Learning</div>
+          <div class="skill">Automação</div>
+          <div class="skill">SQL</div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <a class="btn btn-primary" href="#contato">Contrate / Contato</a>
+          <a class="btn btn-ghost" href="#projects">Ver projetos</a>
+        </div>
+
+        <div class="accent-bar"></div>
+
+        <div style="margin-top:14px">
+          <h3>Resumo rápido</h3>
+          <p style="color:var(--muted)">Transformo dados e processos em resultados concretos. Tenho experiência em automatizar fluxos, limpar bases grandes e entregar modelos interpretáveis para negócio.</p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Contato</h3>
+          <div class="contact-list">
+            <div><strong>Email:</strong> <a class="link" href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></div>
+            <div><strong>LinkedIn:</strong> <a class="link" href="#">linkedin.com/in/seu-perfil</a></div>
+            <div><strong>GitHub:</strong> <a class="link" href="https://github.com/tmemelli">github.com/tmemelli</a></div>
+            <div><strong>Local:</strong> Brasil</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="btn btn-primary" href="mailto:seu.email@exemplo.com">Enviar email</a>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h3>Serviços</h3>
+          <p style="color:var(--muted)">Consultoria em automação, pipelines de dados e desenvolvimento de protótipos em Python.</p>
+          <div style="margin-top:10px"><a class="btn btn-ghost" href="#contato">Peça uma proposta</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" style="margin-top:28px">
+      <h2>Projetos</h2>
+      <div class="projects">
+        <div class="proj">
+          <h4>Fraud Detection — POC</h4>
+          <p>Protótipo de detecção de anomalias e regras simples para sinalização de transações suspeitas.</p>
+        </div>
+        <div class="proj">
+          <h4>Automação de Relatórios</h4>
+          <p>Sistema leve para coleta, limpeza e geração automática de relatórios periódicos em Python.</p>
+        </div>
+        <div class="proj">
+          <div class="proj">
+            <h4>Notebook de Análise</h4>
+            <p>Notebooks com análises exploratórias e visualizações para tomadas de decisão.</p>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj">
+            <h4>Mini-app de Previsão</h4>
+            <p>Aplicação demonstrativa de modelo simples de regressão para previsão de demanda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:28px">
+      <h2>Contato</h2>
+      <div class="card">
+        <p style="color:var(--muted)">Quer conversar sobre um projeto, vaga ou parceria? Mande uma mensagem.</p>
+        <form id="contactForm" onsubmit="handleForm(event)">
+          <div style="display:flex;gap:8px;flex-direction:column">
+            <input id="name" placeholder="Seu nome" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+            <input id="email" placeholder="Seu email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+            <textarea id="message" placeholder="Mensagem" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <button class="btn btn-ghost" type="button" onclick="clearForm()">Limpar</button>
+            </div>
+            <p id="status" style="color:var(--muted);font-size:14px;margin:0"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Thiago Memelli — Python & Data Science • <a class="link" href="#">Política de privacidade</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // NOTE: This form is client-side only (no server). We'll just show a confirmation.
+      // If you later want to actually send emails, we can integrate a server or a service like Formspree / Netlify Forms.
+
+      if(!name || !email || !message) return;
+      document.getElementById('status').innerText = 'Obrigado! Mensagem preparada localmente — você pode integrar envio real depois.';
+
+      // reset
+      setTimeout(()=>{document.getElementById('contactForm').reset();},1500);
+    }
+
+    function clearForm(){
+      document.getElementById('contactForm').reset();
+      document.getElementById('status').innerText = '';
+    }
+  </script>
+</body>
+</html>
