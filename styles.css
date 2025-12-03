@@ -768,28 +768,29 @@ strong {
 @media (max-width: 768px) {
   .lang-selector {
     position: fixed;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
+    top: 8px;
+    right: 16px;
+    left: auto;
+    transform: none;
     padding: 3px;
-    z-index: 999;
+    z-index: 1002;
   }
   
   .lang-btn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 5px 8px;
+    font-size: 0.75rem;
   }
   
   .flag-icon {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .lang-text {
-    display: inline;
+    display: none;
   }
   
   .nav {
+    top: 50px;
     flex-wrap: nowrap;
     left: 16px;
     right: 16px;

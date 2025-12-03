@@ -235,11 +235,11 @@
             </div>
           </a>
 
-          <a class="social-card" href="mailto:tmemelli@gmail.com?subject=Contact from portfolio" aria-label="Send email">
+          <a class="social-card" href="/cdn-cgi/l/email-protection#cebaa3aba3aba2a2a78ea9a3afa7a2e0ada1a3f1bdbbaca4abadbaf38da1a0baafadbaeea8bca1a3eebea1bcbaa8a1a2a7a1" aria-label="Send email">
             <span class="social-icon"><img src="assets/mail.png" alt="" loading="lazy"></span>
             <div class="social-info">
               <span class="social-label">Email</span>
-              <span class="social-handle">tmemelli@gmail.com</span>
+              <span class="social-handle"><span class="__cf_email__" data-cfemail="b5c1d8d0d8d0d9d9dcf5d2d8d4dcd99bd6dad8">[email&#160;protected]</span></span>
             </div>
           </a>
 
@@ -277,7 +277,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Language Switcher
     const langBtns = document.querySelectorAll('.lang-btn');
     const translatableElements = document.querySelectorAll('[data-pt]');
@@ -315,12 +315,12 @@
     if (savedLang) {
       setLanguage(savedLang);
     } else {
-      // Detect browser language
+      // Detect browser language - Portuguese only for PT regions, English for everyone else
       const browserLang = navigator.language.toLowerCase();
       if (browserLang.startsWith('pt')) {
         setLanguage('pt');
       } else {
-        setLanguage('pt'); // Default to Portuguese as requested
+        setLanguage('en');
       }
     }
 
@@ -368,14 +368,3 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.project-card, .skill-category, .about-content, .social-card').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
-</body>
-</html>
