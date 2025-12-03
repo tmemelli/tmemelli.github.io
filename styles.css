@@ -767,9 +767,12 @@ strong {
 
 @media (max-width: 768px) {
   .lang-selector {
-    top: 16px;
+    position: fixed;
+    top: 70px;
     right: 16px;
+    left: auto;
     padding: 3px;
+    z-index: 1001;
   }
   
   .lang-btn {
@@ -779,6 +782,10 @@ strong {
   
   .flag-icon {
     font-size: 1rem;
+  }
+
+  .lang-text {
+    display: none;
   }
   
   .nav {
