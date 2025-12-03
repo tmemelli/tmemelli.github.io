@@ -67,6 +67,57 @@ strong {
   font-weight: 600;
 }
 
+/* Language Selector */
+.lang-selector {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1001;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(15, 18, 32, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+  background: var(--card-hover);
+}
+
+.lang-btn.active {
+  color: var(--text-primary);
+  background: var(--accent-gradient);
+}
+
+.flag-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.lang-text {
+  font-weight: 600;
+}
+
 .nav {
   position: fixed;
   top: 24px;
@@ -715,6 +766,21 @@ strong {
 }
 
 @media (max-width: 768px) {
+  .lang-selector {
+    top: 16px;
+    right: 16px;
+    padding: 3px;
+  }
+  
+  .lang-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .flag-icon {
+    font-size: 1rem;
+  }
+  
   .nav {
     flex-wrap: nowrap;
     left: 16px;
