@@ -685,6 +685,13 @@ strong {
   width: 28px;
   height: 28px;
   opacity: 1;
+  filter: invert(1) brightness(2);
+}
+
+/* Manter LinkedIn e Instagram com cores originais */
+.social-card:nth-child(4) .social-icon img,
+.social-card:nth-child(5) .social-icon img {
+  filter: none;
 }
 
 .social-info {
