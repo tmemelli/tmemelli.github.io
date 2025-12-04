@@ -178,31 +178,26 @@
         <span class="title-number">03.</span> <span data-pt="Projetos em Destaque" data-en="Featured Projects">Projetos em Destaque</span>
       </h2>
       <div class="projects-grid">
-        <!-- Sales Insights Pipeline Project -->
-        <article class="project-card">
+        <article class="project-card featured">
           <div class="project-header">
-            <span class="project-label" data-pt="Análise de Dados / Python" data-en="Data Analytics / Python">Análise de Dados / Python</span>
-            <a href="https://github.com/tmemelli/sales-insights-pipeline" target="_blank" rel="noopener" class="project-icon" aria-label="View on GitHub">
-              <img src="assets/github.png" alt="GitHub" />
+            <span class="project-label">Portfolio Project</span>
+            <a class="project-icon" href="https://github.com/tmemelli/tmemelli.github.io" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+              <img src="assets/github.png" alt="GitHub">
             </a>
           </div>
-          <h3 class="project-title" data-pt="📊 Pipeline de Insights de Vendas" data-en="📊 Sales Insights Pipeline">📊 Pipeline de Insights de Vendas</h3>
-          <p class="project-description" data-pt="Pipeline automatizado de análise de dados de vendas com limpeza inteligente de dados, análise estatística e dashboards HTML interativos. Construído com princípios de POO, processa arquivos CSV, trata outliers, gera 7 tipos de visualizações profissionais e produz insights com IA automaticamente." data-en="Automated sales data analysis pipeline with intelligent data cleaning, statistical analysis, and interactive HTML dashboards. Built with OOP principles, it processes CSV files, handles outliers, generates 7 types of professional visualizations, and produces AI-powered insights automatically.">
-            Pipeline automatizado de análise de dados de vendas com limpeza inteligente de dados, análise estatística e dashboards HTML interativos. Construído com princípios de POO, processa arquivos CSV, trata outliers, gera 7 tipos de visualizações profissionais e produz insights com IA automaticamente.
+          <h3 class="project-title" data-pt="Portfólio Pessoal" data-en="Personal Portfolio">Portfólio Pessoal</h3>
+          <p class="project-description" data-pt="Website pessoal moderno construído do zero usando HTML, CSS e JavaScript. Design responsivo com animações suaves e tema escuro. Apresenta navegação intuitiva, tradução PT/EN, e otimização para performance." data-en="Modern personal website built from scratch using HTML, CSS, and JavaScript. Responsive design with smooth animations and dark theme. Features intuitive navigation, PT/EN translation, and performance optimization.">
+            Website pessoal moderno construído do zero usando HTML, CSS e JavaScript. Design responsivo com animações suaves e tema escuro. Apresenta navegação intuitiva, tradução PT/EN, e otimização para performance.
           </p>
           <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">Matplotlib</span>
-            <span class="tech-tag">Seaborn</span>
-            <span class="tech-tag">OOP</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub Pages</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/tmemelli/sales-insights-pipeline#readme" target="_blank" rel="noopener" class="project-link">
-              <span data-pt="Ver Documentação" data-en="View Documentation">Ver Documentação</span> <span class="arrow">→</span>
-            </a>
-            <a href="https://github.com/tmemelli/sales-insights-pipeline" target="_blank" rel="noopener" class="project-link">
+            <a class="project-link" href="https://github.com/tmemelli/tmemelli.github.io" target="_blank" rel="noopener noreferrer">
               <span data-pt="Ver Código" data-en="View Code">Ver Código</span> <span class="arrow">→</span>
             </a>
           </div>
@@ -235,11 +230,11 @@
             </div>
           </a>
 
-          <a class="social-card" href="mailto:tmemelli@gmail.com?subject=Contact from portfolio" aria-label="Send email">
+          <a class="social-card" href="/cdn-cgi/l/email-protection#7e0a131b131b1212173e19131f1712501d1113410d0b1c141b1d0a433d11100a1f1d0a5e180c11135e0e110c0a1811121711" aria-label="Send email">
             <span class="social-icon"><img src="assets/mail.png" alt="" loading="lazy"></span>
             <div class="social-info">
               <span class="social-label">Email</span>
-              <span class="social-handle">tmemelli@gmail.com</span>
+              <span class="social-handle"><span class="__cf_email__" data-cfemail="93e7fef6fef6fffffad3f4fef2faffbdf0fcfe">[email&#160;protected]</span></span>
             </div>
           </a>
 
@@ -266,6 +261,15 @@
               <span class="social-handle">@thiagomemelli</span>
             </div>
           </a>
+
+          <!-- WhatsApp Card -->
+          <a class="social-card" href="https://wa.me/5527989030474" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><img src="assets/whatsapp.png" alt="" loading="lazy"></span>
+            <div class="social-info">
+              <span class="social-label">WhatsApp</span>
+              <span class="social-handle">+55 27 98903-0474</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -277,7 +281,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Language Switcher
     const langBtns = document.querySelectorAll('.lang-btn');
     const translatableElements = document.querySelectorAll('[data-pt]');
@@ -369,11 +373,13 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    document.querySelectorAll('.project-card, .skill-category, .about-content, .social-card').forEach(el => {
+    // Observe all animatable elements
+    document.querySelectorAll('.about-content, .skill-category, .project-card, .social-card').forEach(el => {
       observer.observe(el);
     });
   </script>
